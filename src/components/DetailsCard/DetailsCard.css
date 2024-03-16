@@ -1,0 +1,53 @@
+@import url('https://rsms.me/inter/inter.css');
+
+.details-card {
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-rows: repeat(2, 1fr); /* Two rows */
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    background: rgba(15, 27, 30, 0.38);
+    box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.70);
+    color: white;
+  }
+  
+.weather-metric {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+  
+  /* Replace with actual icon dimensions and styles */
+.icon {
+    width: 40px; /* Example size */
+    height: 40px; /* Example size */
+    margin-bottom: 4px;
+}
+
+.weather-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.weather-metric-type {
+    color: rgba(255, 255, 255, 0.59);
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.weather-metric-value {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}

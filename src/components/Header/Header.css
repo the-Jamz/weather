@@ -1,0 +1,30 @@
+@import url('https://rsms.me/inter/inter.css');
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  color: white;
+}
+
+.location-icon,
+.menu-icon,
+.settings-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.location {
+  display: flex;
+  text-align: center;
+}
+
+.location-text {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.50);
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal; 
+  margin: 0;
+}

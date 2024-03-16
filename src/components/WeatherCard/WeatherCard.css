@@ -1,0 +1,67 @@
+@import url('https://rsms.me/inter/inter.css');
+
+.weather-card {
+  border-radius: 20px;
+  background: rgba(15, 27, 30, 0.38);
+  box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.70);
+  padding: 20px;
+  color: white;
+  margin: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.weather-visual {
+  position: absolute;
+  top: -20px; /* Adjust this value to move the cloud higher */
+  left: 20px; /* Adjust this value based on your design needs */
+  z-index: 10;
+}
+
+.weather-icon {
+  backdrop-filter: blur(13.5px);
+}
+
+.temperature {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.date,
+.feels-like {
+  color: rgba(255, 255, 255, 0.50);
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.weather-description {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.left,
+.right {
+  display: flex;
+  flex-direction: column;
+}
+
+.left {
+  padding-top: 40px;
+}
+
+.additional-info {
+  /* Style for any additional icons and information */
+}
