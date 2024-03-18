@@ -4,6 +4,9 @@ import './DetailsCard.css';
 // import { ReactComponent as HumidityIcon } from './icons/humidity.svg';
 // Repeat for the other icons.
 
+
+
+
 const DetailsCard = ({ humidity, wind, uvIndex, precipitation }) => {
   return (
     <div className="details-card">
@@ -19,7 +22,7 @@ const DetailsCard = ({ humidity, wind, uvIndex, precipitation }) => {
         <img src="/vectors/wind.svg" />
         <div className="weather-text">
             <span className="weather-metric-type">Wind</span>
-            <span className="weather-metric-value">{wind} MPH</span>
+            <span className="weather-metric-value">{wind} KMPH</span>
         </div>
       </div>
       <div className="weather-metric uv-index">

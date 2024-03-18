@@ -1,0 +1,52 @@
+.use-my-location-button {
+
+}
+
+.use-my-location-container {
+  margin-left: 1rem;
+}
+
+
+.use-my-location-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  /* Additional styles */
+}
+
+.use-my-location-button:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+
+/* header.css - Modify your existing media query like this */
+@media (max-width: 600px) { /* Adjust the max-width as needed for your design */
+  .location-form-container {
+    flex-direction: column; /* Stack children vertically on small screens */
+    align-items: center; /* Center align the flex items */
+  }
+
+  .location-form {
+    width: 100%; /* Full width */
+    margin-bottom: 0.5rem; /* Adjusted space between form and button */
+  }
+
+  .location-input,
+  .use-my-location-button {
+    max-width: 300px; /* Maximum width for the input and button */
+    width: 100%; /* Full width */
+  }
+
+  .use-my-location-button {
+    padding: 0.5rem; /* Adjust padding to reduce button size */
+  }
+}
+

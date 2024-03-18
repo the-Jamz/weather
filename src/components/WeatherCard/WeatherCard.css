@@ -4,27 +4,40 @@
   border-radius: 20px;
   background: rgba(15, 27, 30, 0.38);
   box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.70);
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-template-rows: repeat(2, 1fr, auto); /* Three rows */
+  display: grid;
   padding: 20px;
   color: white;
   margin: 20px;
   position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+}
+
+.weather-card-icon {
+  transform: scale(1.5);
 }
 
 .weather-visual {
   position: absolute;
-  top: -20px; /* Adjust this value to move the cloud higher */
-  left: 20px; /* Adjust this value based on your design needs */
+  top: -20px;
+  left: 20px;
   z-index: 10;
 }
 
-.weather-icon {
-  backdrop-filter: blur(13.5px);
+.weathercard-description-section {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
-.temperature {
+.weathercard-temperature-section {
+  display: flex;
+  align-items: flex-end;
+  grid-column-start: 2;
+  flex-direction: column;
+}
+
+.weathercard-temperature {
   color: #FFF;
   font-family: Inter;
   font-size: 4rem;
@@ -33,7 +46,7 @@
   line-height: normal;
 }
 
-.date,
+.weathercard-date,
 .feels-like {
   color: rgba(255, 255, 255, 0.50);
   font-family: Inter;
@@ -50,6 +63,19 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  align-items: flex-start;
+}
+
+.weathercard-icon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.cyclist-icon {
+  height: 2rem;
+  width: 2rem;
+  padding: 5px;
 }
 
 .left,
@@ -60,8 +86,4 @@
 
 .left {
   padding-top: 40px;
-}
-
-.additional-info {
-  /* Style for any additional icons and information */
 }

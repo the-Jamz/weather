@@ -13,7 +13,7 @@ const CircularProgress = ({ size, progress, strokeWidth }) => {
         fill="transparent"
         strokeWidth={strokeWidth}
         strokeDasharray={circumference + ' ' + circumference}
-        style={{ transition: 'stroke-dashoffset 0.5s ease 0s' }}
+        style={{ transition: 'stroke-dashoffset 3s ease 0s' }}
         r={radius}
         cx={size / 2}
         cy={size / 2}
@@ -23,7 +23,7 @@ const CircularProgress = ({ size, progress, strokeWidth }) => {
         fill="transparent"
         strokeWidth={strokeWidth}
         strokeDasharray={circumference + ' ' + circumference}
-        style={{ transition: 'stroke-dashoffset 0.5s ease 0s', strokeDashoffset: offset }}
+        style={{ transition: 'stroke-dashoffset 3s ease 0s', strokeDashoffset: offset }}
         r={radius}
         cx={size / 2}
         cy={size / 2}
