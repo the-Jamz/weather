@@ -1,3 +1,4 @@
+// Header.js
 import React, { useState } from 'react';
 import './Header.css';
 import Location from '../Location/Location';
@@ -10,16 +11,21 @@ const Header = ({ setWeatherData }) => {
     setCity(event.target.value);
   };
 
+
   const handleSubmit = (event) => {
     event.preventDefault();
     fetchWeatherByCity(city, setWeatherData);
-    setCity('');
+    setCity('')
+  };
+
+  const handleLocationSuccess = (cityName) => {
+      setCity('')
+    setCity(cityName);
   };
 
   return (
       <div className="header">
           <img src="/vectors/menu.svg" alt="Menu" className="menu-icon"/>
-
           <div className="location-form-container">
               <form onSubmit={handleSubmit} className="location-form">
                   <img src="/vectors/location.svg" className="location-icon"/>
@@ -31,10 +37,9 @@ const Header = ({ setWeatherData }) => {
                   />
               </form>
               <div className="use-my-location-container">
-                  <Location />
+                  <Location setWeatherData={setWeatherData} onLocationSuccess={handleLocationSuccess}/> {/* Pass setCity as prop */}
               </div>
           </div>
-
           <img src="/vectors/profile.svg" alt="Settings" className="settings-icon"/>
       </div>
   );
