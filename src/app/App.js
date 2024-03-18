@@ -60,7 +60,7 @@ const App = () => {
         )}
       </div>
       <div className="comfort-index">
-        <ComfortIndex size={250} progress={40} strokeWidth={20} />
+        <ComfortIndex size={250} strokeWidth={20} weatherData={weatherData} />
       </div>
       <div>
         { weatherData ? (
