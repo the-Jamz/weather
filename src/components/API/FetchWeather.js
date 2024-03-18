@@ -7,14 +7,14 @@ const api = {
   base: "https://api.openweathermap.org/data/2.5/"
 };
 
-const fetchWeatherByCoords = async (latitude, longitude, setWeather, handleLocationSuccess) => {
+const fetchWeatherByCoords = async (latitude, longitude, setWeather, onLocationSuccess) => {
   try {
     const response = await axios.get(
       `${api.base}weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${api.key}`
     );
     setWeather(response.data);
     console.log(response.data.name)
-    handleLocationSuccess(response.data.name);
+    onLocationSuccess(response.data.name);
 
   } catch (error) {
     console.error('Error fetching weather by coordinates:', error);

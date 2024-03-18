@@ -3,12 +3,12 @@ import React from 'react';
 import { fetchWeatherByCoords } from '../API/FetchWeather';
 import './Location.css';
 
-const Location = ({ setWeatherData, handleLocationSuccess }) => { // Receive setCity as prop
+const Location = ({ setWeatherData, onLocationSuccess }) => { // Receive setCity as prop
     const getGeolocation = () => {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition((position) => {
                 const { latitude, longitude } = position.coords;
-                fetchWeatherByCoords(latitude, longitude, setWeatherData, handleLocationSuccess); // Pass setCity as argument
+                fetchWeatherByCoords(latitude, longitude, setWeatherData, onLocationSuccess); // Pass setCity as argument
             }, (error) => {
                 console.error('Error obtaining location:', error);
             });
