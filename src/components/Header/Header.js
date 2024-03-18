@@ -33,7 +33,7 @@ const Header = ({ setWeatherData }) => {
                       type="text"
                       className="location-input"
                       value={city}
-                        placeholder="Search for a city"
+                        placeholder="Search for a city..."
                       onChange={handleInputChange}
                   />
               </form>
