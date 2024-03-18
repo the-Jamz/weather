@@ -1,0 +1,30 @@
+@import url('https://rsms.me/inter/inter.css');
+
+.comfort-index {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Aligns children in a column */
+  justify-content: center; /* Centers children on the cross-axis */
+  align-items: center; /* Centers children on the main-axis */
+}
+
+.centered-content {
+  position: absolute;
+}
+
+.comfort-text {
+  color: rgba(255, 255, 255, 0.50);
+  text-shadow: 2px 4px 4px #1F3653;
+  font-family: 'Inter';
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 65%;
+}
+
+/*img {
+  transform: scale(1.1);
+}*/

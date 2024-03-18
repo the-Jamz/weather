@@ -1,0 +1,25 @@
+@import url('https://rsms.me/inter/inter.css');
+
+.alert {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.93);
+    box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.70);
+  }
+  
+  .alert-icon {
+    margin-right: 0.5rem;
+    /* Adjust the size of your icon as needed */
+  }
+  
+  .alert-text {
+    flex: 1; /* ensures the text takes up the remaining space */
+    color: #BE0202;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-right: 0.5rem;
+  }

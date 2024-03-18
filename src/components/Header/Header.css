@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  color: white;
+}
+
+.menu-icon,
+.settings-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.location-form-container {
+  display: flex;
+  align-items: center;
+}
+
+.location-form {
+  display: flex;
+  align-items: center;
+}
+
+.location-input {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: Inter;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.75);
+  margin-right: 1rem;
+  color: white;
+}
+
+.location-input:focus {
+  outline: none;
+  border-color: white;
+}
