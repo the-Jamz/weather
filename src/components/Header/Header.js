@@ -19,9 +19,9 @@ const Header = ({ setWeatherData }) => {
   };
 
   const handleLocationSuccess = (cityName) => {
-      setCity('')
-    setCity(cityName);
-  };
+  setCity(cityName);
+};
+
 
   return (
       <div className="header">
