@@ -15,14 +15,12 @@ const ComfortIndex = ({ size, strokeWidth, weatherData}) => {
 
       let comfortLevel = 100; // Start with a base comfort level of 100
 
-
       comfortLevel -= (
         0.1 * Math.pow(weatherData.main.temp - 20, 2) +
         0.03 * Math.pow(weatherData.main.humidity - 50, 2) +
         0.1 * Math.pow(weatherData.wind.speed - 10, 2)
       );
 
-      // Further adjust comfort level based on specific weather conditions
       if (weatherData.weather[0].main === 'Rain' || weatherData.weather[0].main === 'Drizzle') {
         comfortLevel -= 15;
       } else if (weatherData.weather[0].main === 'Snow') {
@@ -32,12 +30,10 @@ const ComfortIndex = ({ size, strokeWidth, weatherData}) => {
       }
 
       comfortLevel = Math.max(-100, Math.min(comfortLevel, 100));
-
       return Math.round(comfortLevel);
     }
-
+    
     const progress = calculateComfortLevel(weatherData);
-
     const scale = size / 200;
 
     return (
