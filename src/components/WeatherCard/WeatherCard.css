@@ -47,6 +47,7 @@
 }
 
 .weathercard-date,
+.weathercard-city,
 .feels-like {
   color: rgba(255, 255, 255, 0.50);
   font-family: Inter;

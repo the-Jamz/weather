@@ -58,7 +58,7 @@ const App = () => {
       </div>
       <div>
         { weatherData ? (
-          <WeatherCard description={weatherData.weather[0].description} temp={Math.round(weatherData.main.temp)} feels_like={Math.round(weatherData.main.feels_like)} />
+          <WeatherCard city ={weatherData.name} description={weatherData.weather[0].description} temp={Math.round(weatherData.main.temp)} feels_like={Math.round(weatherData.main.feels_like)} />
         ) : (
           <p>Loading weather data...</p>
         )}
