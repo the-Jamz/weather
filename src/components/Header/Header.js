@@ -25,6 +25,7 @@ const Header = ({ setWeatherData }) => {
 
   return (
       <div className="header">
+
           <img src="/vectors/menu.svg" alt="Menu" className="menu-icon"/>
           <div className="location-form-container">
               <form onSubmit={handleSubmit} className="location-form">

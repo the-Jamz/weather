@@ -50,7 +50,11 @@ const App = () => {
     <main>
         <Header setWeatherData={setWeatherData} setQuery={setQuery} />
       <div className="weather-alert">
-        <Alert message="Snow" />
+          { weatherData ? (
+              <Alert message={weatherData.weather[0].main} />
+        ) : (
+          <p>Loading weather data...</p>
+        )}
       </div>
       <div>
         { weatherData ? (
