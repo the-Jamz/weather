@@ -8,36 +8,33 @@ import './ComfortIndex.css';
 const ComfortIndex = ({ size, strokeWidth, weatherData}) => {
 
     function calculateComfortLevel(weatherData) {
-  if (!weatherData || !weatherData.main || !weatherData.weather || weatherData.weather.length === 0) {
-    console.error("Invalid weather data:", weatherData);
-    return 0;
-  }
+      if (!weatherData || !weatherData.main || !weatherData.weather || weatherData.weather.length === 0) {
+        console.error("Invalid weather data:", weatherData);
+        return 0;
+      }
 
-  let comfortLevel = 100; // Start with a base comfort level of 100
-
-  // Adjust comfort level based on temperature, humidity, and wind speed
-  comfortLevel -= (
-    0.1 * Math.pow(weatherData.main.temp - 20, 2) +
-    0.03 * Math.pow(weatherData.main.humidity - 50, 2) +
-    0.1 * Math.pow(weatherData.wind.speed - 10, 2)
-  );
-
-  // Further adjust comfort level based on specific weather conditions
-  if (weatherData.weather[0].main === 'Rain' || weatherData.weather[0].main === 'Drizzle') {
-    comfortLevel -= 15;
-  } else if (weatherData.weather[0].main === 'Snow') {
-    comfortLevel -= 25;
-  } else if (weatherData.weather[0].main === 'Thunderstorm') {
-    comfortLevel -= 30;
-  }
-
-  // Allow for negative comfort level, indicating more uncomfortable conditions
-  comfortLevel = Math.max(-100, Math.min(comfortLevel, 100));
-
-  return Math.round(comfortLevel);
-}
+      let comfortLevel = 100; // Start with a base comfort level of 100
 
 
+      comfortLevel -= (
+        0.1 * Math.pow(weatherData.main.temp - 20, 2) +
+        0.03 * Math.pow(weatherData.main.humidity - 50, 2) +
+        0.1 * Math.pow(weatherData.wind.speed - 10, 2)
+      );
+
+      // Further adjust comfort level based on specific weather conditions
+      if (weatherData.weather[0].main === 'Rain' || weatherData.weather[0].main === 'Drizzle') {
+        comfortLevel -= 15;
+      } else if (weatherData.weather[0].main === 'Snow') {
+        comfortLevel -= 25;
+      } else if (weatherData.weather[0].main === 'Thunderstorm') {
+        comfortLevel -= 30;
+      }
+
+      comfortLevel = Math.max(-100, Math.min(comfortLevel, 100));
+
+      return Math.round(comfortLevel);
+    }
 
     const progress = calculateComfortLevel(weatherData);
 
