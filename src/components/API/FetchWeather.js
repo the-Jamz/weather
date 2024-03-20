@@ -49,7 +49,6 @@ const processWeatherData = (weatherData) => {
   return dailyForecasts;
 };
 
-
 const fetchForecastByCoords = async (latitude, longitude) => {
   try {
     const response = await axios.get(
@@ -83,7 +82,7 @@ const fetchWeatherByCity = async (city, setWeather) => {
     );
     setWeather(response.data);
   } catch (error) {
-    console.error('Error fetching weather by city:', error);
+    return null;
   }
 };
 

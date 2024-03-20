@@ -21,10 +21,9 @@
     padding: 5px;
 }
   
-  /* Replace with actual icon dimensions and styles */
 .icon {
-    width: 40px; /* Example size */
-    height: 40px; /* Example size */
+    width: 40px;
+    height: 40px;
     margin-bottom: 4px;
 }
 
