@@ -2,11 +2,7 @@ import React from 'react';
 import CircularProgress from '../CircularProgress/CircularProgress';
 import './ComfortIndex.css';
 
-
-
-
 const ComfortIndex = ({ size, strokeWidth, weatherData}) => {
-
     function calculateComfortLevel(weatherData) {
       if (!weatherData || !weatherData.main || !weatherData.weather || weatherData.weather.length === 0) {
         console.error("Invalid weather data:", weatherData);
