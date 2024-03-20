@@ -10,15 +10,14 @@
 }
 
 /* Adjustments for smaller screens */
-@media screen and (max-width: 768px) { /* Adjust the max-width as needed */
+@media screen and (max-width: 768px) {
   .forecast-group {
-    justify-content: flex-start; /* Aligns items to the start of the container */
+    justify-content: flex-start;
   }
 
   .forecast-group::before,
   .forecast-group::after {
     content: '';
-    flex: 0 0 10px; /* Adds space before the first item and after the last item */
+    flex: 0 0 10px;
   }
 }
-  
