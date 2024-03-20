@@ -74,7 +74,11 @@ const App = () => {
         )}
       </div>
       <h2>Weekly Forecast</h2>
-      <ForecastGroup data={forecastData} />
+      { weatherData ? (
+        <ForecastGroup data={weatherData} />
+      ) : (
+        <p>...</p>
+      )}
     </main>
   );
 };

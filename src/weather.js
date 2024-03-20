@@ -11,7 +11,6 @@ const Weather = () => {
         `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=47525f0e1fc90897595c78f5cbffc723`
       );
       setWeatherData(response.data);
-      console.log(response.data); // You can see all the weather data in console log
     } catch (error) {
       console.error(error);
     }
