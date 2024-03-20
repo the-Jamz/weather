@@ -37,7 +37,7 @@
   top: 50%;
   left: 15px;
   transform: translateY(-50%);
-  background-image: url('/public/vectors/cloud.svg');
+  background-image: url('../../assets/vectors/cloud.svg');
   background-size: cover;
   background-repeat: no-repeat;
   height: 20px;
