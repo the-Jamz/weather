@@ -1,30 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import Weather from '../weather';
 import Alert from '../components/Alert/Alert';
 import WeatherCard from '../components/WeatherCard/WeatherCard';
 import ComfortIndex from '../components/ComfortIndex/ComfortIndex';
 import DetailsCard from '../components/DetailsCard/DetailsCard';
 import ForecastGroup from '../components/ForecastGroup/ForecastGroup';
-
-
-
-
 import Header from '../components/Header/Header';
-
-
-
-
-
-
 import axios from 'axios';
 import './app.css';
-
-const forecastData = [
-  { day: 'Mon', date: '25 Feb', temperature: 18 },
-  { day: 'Tue', date: '26 Feb', temperature: 15 },
-  { day: 'Wed', date: '27 Feb', temperature: 17 },
-  { day: 'Thu', date: '28 Feb', temperature: 19 },
-];
 
 const fetchWeatherData = async (city, setWeatherData) => {
   try {
@@ -64,7 +46,11 @@ const App = () => {
         )}
       </div>
       <div className="comfort-index">
-        <ComfortIndex size={250} strokeWidth={20} weatherData={weatherData} />
+        { weatherData ? (
+          <ComfortIndex size={250} strokeWidth={20} weatherData={weatherData} />
+        ) : (
+          <p>Loading weather data...</p>
+        )}
       </div>
       <div>
         { weatherData ? (
