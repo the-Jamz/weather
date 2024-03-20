@@ -1,5 +1,7 @@
 import React from 'react';
-import './WeatherCard.css'; // Your CSS file
+import Cloud from '../../assets/vectors/cloud.svg';
+import Cyclist from '../../assets/vectors/cyclist.svg';
+import './WeatherCard.css';
 
 
 const capitalizeWords = (words) => {
@@ -22,7 +24,7 @@ const WeatherCard = ({city, description, temp, feels_like}) => {
   const currentDay = getCurrentDay();
   return (
     <div className="weather-card">
-      <div className="weather-visual"><img className="weather-card-icon" src="/vectors/cloud.svg" /></div>
+      <div className="weather-visual"><img className="weather-card-icon" src={Cloud} /></div>
       <div className="weathercard-temperature-section">
         <div className="weathercard-temperature">{temp}°C</div>
         <div className="feels-like">Feels like {feels_like}°C</div>
@@ -32,7 +34,7 @@ const WeatherCard = ({city, description, temp, feels_like}) => {
             <div className="weathercard-city">{city}</div>
             <div className="weathercard-date">{currentDay}</div>
         </div>
-        <div className="weathercard-icon"><img className="cyclist-icon" src="/vectors/cyclist.svg" /></div>
+        <div className="weathercard-icon"><img className="cyclist-icon" src={Cyclist} /></div>
     </div>
   );
 };

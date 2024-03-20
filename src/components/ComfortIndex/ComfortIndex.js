@@ -1,5 +1,6 @@
 import React from 'react';
 import CircularProgress from '../CircularProgress/CircularProgress';
+import RainSvg from '../../assets/vectors/weather-lines/icons/rain.svg';
 import './ComfortIndex.css';
 
 const ComfortIndex = ({ size, strokeWidth, weatherData}) => {
@@ -36,7 +37,7 @@ const ComfortIndex = ({ size, strokeWidth, weatherData}) => {
         <div className="comfort-index" width={size} height={size}>
             <CircularProgress size={size} progress={progress} strokeWidth={strokeWidth} />
                 <div className="centered-content">
-                    <img src="/vectors/weather-lines/icons/rain.svg" style={{ transform: `scale(${scale})` }} />
+                    <img src={RainSvg} style={{ transform: `scale(${scale})` }} />
                 </div>
             <p className="comfort-text">COMFORT</p>
         </div>

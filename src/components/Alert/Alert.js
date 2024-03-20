@@ -1,8 +1,8 @@
 import React from 'react';
-import './Alert.css'; // Your CSS file
+import AlertSvg from '../../assets/vectors/alert.svg';
+import './Alert.css';
 
 const Alert = ({ message }) => {
-  // If you need a state to handle the visibility
   const [isVisible, setIsVisible] = React.useState(true);
   if (!message) {
     return null;
@@ -28,7 +28,7 @@ const Alert = ({ message }) => {
 
   return (
     <div className={getAlertClass(message)}>
-      {message !== 'Clear' && <img src="/vectors/alert.svg" className="alert-icon" />}
+      {message !== 'Clear' && <img src={AlertSvg} className="alert-icon" />}
       <span className="alert-text">{message}</span>
     </div>
   );

@@ -1,17 +1,15 @@
 import React from 'react';
 import './DetailsCard.css';
-// Import your icons here. For example:
-// import { ReactComponent as HumidityIcon } from './icons/humidity.svg';
-// Repeat for the other icons.
-
-
-
+import Humidity from '../../assets/vectors/humidity.svg';
+import Wind from '../../assets/vectors/wind.svg';
+import Sun from '../../assets/vectors/sun.svg';
+import Precipitation from '../../assets/vectors/precipitation.svg';
 
 const DetailsCard = ({ humidity, wind, uvIndex, precipitation }) => {
   return (
     <div className="details-card">
       <div className="weather-metric humidity">
-        <img src="/vectors/humidity.svg" />
+        <img src={Humidity} />
         <div className="icon-humidity"></div>
         <div className="weather-text">
             <span className="weather-metric-type">Humidity</span>
@@ -19,21 +17,21 @@ const DetailsCard = ({ humidity, wind, uvIndex, precipitation }) => {
         </div>
       </div>
       <div className="weather-metric wind">
-        <img src="/vectors/wind.svg" />
+        <img src={Wind} />
         <div className="weather-text">
             <span className="weather-metric-type">Wind</span>
             <span className="weather-metric-value">{wind} KMPH</span>
         </div>
       </div>
       <div className="weather-metric uv-index">
-        <img src="/vectors/sun.svg" />
+        <img src={Sun} />
         <div className="weather-text">
             <span className="weather-metric-type">UV Index</span>
             <span className="weather-metric-value">{uvIndex}</span>
         </div>
       </div>
       <div className="weather-metric precipitation">
-        <img src="/vectors/precipitation.svg" />
+        <img src={Precipitation} />
         <div className="weather-text">
             <span className="weather-metric-type">Precipitation</span>
             <span className="weather-metric-value">{precipitation} %</span>
