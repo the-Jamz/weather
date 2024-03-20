@@ -25,6 +25,7 @@ const Header = ({ setWeatherData }) => {
 
   return (
       <div className="header">
+
           <img src="/vectors/menu.svg" alt="Menu" className="menu-icon"/>
           <div className="location-form-container">
               <form onSubmit={handleSubmit} className="location-form">
@@ -33,7 +34,7 @@ const Header = ({ setWeatherData }) => {
                       type="text"
                       className="location-input"
                       value={city}
-                        placeholder="Search for a city"
+                        placeholder="Search for a city..."
                       onChange={handleInputChange}
                   />
               </form>

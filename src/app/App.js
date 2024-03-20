@@ -50,17 +50,21 @@ const App = () => {
     <main>
         <Header setWeatherData={setWeatherData} setQuery={setQuery} />
       <div className="weather-alert">
-        <Alert message="Snow" />
+          { weatherData ? (
+              <Alert message={weatherData.weather[0].main} />
+        ) : (
+          <p>Loading weather data...</p>
+        )}
       </div>
       <div>
         { weatherData ? (
-          <WeatherCard description={weatherData.weather[0].description} temp={Math.round(weatherData.main.temp)} feels_like={Math.round(weatherData.main.feels_like)} />
+          <WeatherCard city ={weatherData.name} description={weatherData.weather[0].description} temp={Math.round(weatherData.main.temp)} feels_like={Math.round(weatherData.main.feels_like)} />
         ) : (
           <p>Loading weather data...</p>
         )}
       </div>
       <div className="comfort-index">
-        <ComfortIndex size={250} progress={40} strokeWidth={20} />
+        <ComfortIndex size={250} strokeWidth={20} weatherData={weatherData} />
       </div>
       <div>
         { weatherData ? (

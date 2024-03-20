@@ -18,7 +18,7 @@ const getCurrentDay = () => {
   return `${dayOfWeek}, ${dayOfMonth} ${month}`;
 }
 
-const WeatherCard = ({ description, temp, feels_like }) => {
+const WeatherCard = ({city, description, temp, feels_like}) => {
   const currentDay = getCurrentDay();
   return (
     <div className="weather-card">
@@ -27,11 +27,12 @@ const WeatherCard = ({ description, temp, feels_like }) => {
         <div className="weathercard-temperature">{temp}°C</div>
         <div className="feels-like">Feels like {feels_like}°C</div>
       </div>
-      <div className="weathercard-description-section">
-        <div className="weather-description">{capitalizeWords(description)}</div>
-        <div className="weathercard-date">{currentDay}</div>
-      </div>
-      <div className="weathercard-icon"><img className="cyclist-icon" src="/vectors/cyclist.svg" /></div>
+        <div className="weathercard-description-section">
+            <div className="weather-description">{capitalizeWords(description)}</div>
+            <div className="weathercard-city">{city}</div>
+            <div className="weathercard-date">{currentDay}</div>
+        </div>
+        <div className="weathercard-icon"><img className="cyclist-icon" src="/vectors/cyclist.svg" /></div>
     </div>
   );
 };

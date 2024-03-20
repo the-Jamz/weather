@@ -1,7 +1,4 @@
 import axios from 'axios';
-
-
-
 const api = {
   key: "47525f0e1fc90897595c78f5cbffc723",
   base: "https://api.openweathermap.org/data/2.5/"
