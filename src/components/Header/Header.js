@@ -33,12 +33,12 @@ const Header = ({ setWeatherData }) => {
                       type="text"
                       className="location-input"
                       value={city}
-                        placeholder="Search for a city..."
+                      placeholder="Search for a city..."
                       onChange={handleInputChange}
                   />
               </form>
               <div className="use-my-location-container">
-                  <Location setWeatherData={setWeatherData} onLocationSuccess={handleLocationSuccess}/> {/* Pass setCity as prop */}
+                  <Location setWeatherData={setWeatherData} onLocationSuccess={handleLocationSuccess}/>
               </div>
           </div>
           <img src={ProfileSvg} alt="Settings" className="settings-icon"/>

@@ -38,3 +38,50 @@
   outline: none;
   border-color: white;
 }
+
+
+/* Existing styles */
+/* ... */
+
+/* Mobile styles */
+/* Other styles remain unchanged */
+
+/* Other styles remain unchanged */
+
+@media screen and (max-width: 400px) {
+
+  .location-form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .location-form {
+    flex-direction: column;
+    width: 100%;
+
+  }
+
+  .location-input {
+    width: 75%;
+    margin-bottom: 0.5rem; /* Space between input and location button */
+    font-size: 1.2rem;
+  }
+
+  .use-my-location-container {
+    width: 100%;
+    margin-left: 1.5rem;
+
+  }
+
+  /* Style the button as needed, the following is just an example */
+  .use-my-location-button {
+    padding: 10px;
+
+  }
+}
+
+
+
+
