@@ -1,25 +1,58 @@
 @import url('https://rsms.me/inter/inter.css');
 
 .alert {
-    display: flex;
-    align-items: center;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.93);
-    box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.70);
-  }
-  
-  .alert-icon {
-    margin-right: 0.5rem;
-    /* Adjust the size of your icon as needed */
-  }
-  
-  .alert-text {
-    flex: 1; /* ensures the text takes up the remaining space */
-    color: #BE0202;
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-right: 0.5rem;
-  }
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.93); /* White background as default */
+  box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.70);
+  padding: 0.5rem 1rem; /* Add some padding */
+  position: relative; /* For positioning the cloud icon */
+}
+
+/* Color-coded background styles */
+.amber {
+  background-color: #FFBF00; /* Amber color for rain or drizzle */
+}
+
+.red {
+  background-color: #FF4136; /* Red color for snow */
+}
+
+.clear {
+  background: #ffffff; /* Clear - No background for clear weather */
+  box-shadow: none;
+}
+
+.drizzle {
+  background: #61bed5; /* Clear - No background for clear weather */
+  box-shadow: none;
+
+}
+
+/* Cloud icon for cloudy weather */
+.cloudy::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  background-image: url('../../assets/vectors/cloud.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+}
+
+.alert-icon {
+  margin-left: 0rem;
+}
+
+.alert-text {
+  flex: 1;
+  color: #333;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 0.5rem;
+}

@@ -1,30 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import Weather from '../weather';
 import Alert from '../components/Alert/Alert';
 import WeatherCard from '../components/WeatherCard/WeatherCard';
 import ComfortIndex from '../components/ComfortIndex/ComfortIndex';
 import DetailsCard from '../components/DetailsCard/DetailsCard';
 import ForecastGroup from '../components/ForecastGroup/ForecastGroup';
-
-
-
-
 import Header from '../components/Header/Header';
-
-
-
-
-
-
 import axios from 'axios';
 import './app.css';
-
-const forecastData = [
-  { day: 'Mon', date: '25 Feb', temperature: 18 },
-  { day: 'Tue', date: '26 Feb', temperature: 15 },
-  { day: 'Wed', date: '27 Feb', temperature: 17 },
-  { day: 'Thu', date: '28 Feb', temperature: 19 },
-];
 
 const fetchWeatherData = async (city, setWeatherData) => {
   try {
@@ -50,17 +32,25 @@ const App = () => {
     <main>
         <Header setWeatherData={setWeatherData} setQuery={setQuery} />
       <div className="weather-alert">
-        <Alert message="Snow" />
+          { weatherData ? (
+              <Alert message={weatherData.weather[0].main} />
+        ) : (
+          <p>Loading weather data...</p>
+        )}
       </div>
       <div>
         { weatherData ? (
-          <WeatherCard description={weatherData.weather[0].description} temp={Math.round(weatherData.main.temp)} feels_like={Math.round(weatherData.main.feels_like)} />
+          <WeatherCard city ={weatherData.name} description={weatherData.weather[0].description} temp={Math.round(weatherData.main.temp)} feels_like={Math.round(weatherData.main.feels_like)} />
         ) : (
           <p>Loading weather data...</p>
         )}
       </div>
       <div className="comfort-index">
-        <ComfortIndex size={250} progress={40} strokeWidth={20} />
+        { weatherData ? (
+          <ComfortIndex size={250} strokeWidth={20} weatherData={weatherData} />
+        ) : (
+          <p>Loading weather data...</p>
+        )}
       </div>
       <div>
         { weatherData ? (
@@ -70,7 +60,11 @@ const App = () => {
         )}
       </div>
       <h2>Weekly Forecast</h2>
-      <ForecastGroup data={forecastData} />
+      { weatherData ? (
+        <ForecastGroup data={weatherData} />
+      ) : (
+        <p>...</p>
+      )}
     </main>
   );
 };

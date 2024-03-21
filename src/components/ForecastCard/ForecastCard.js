@@ -1,7 +1,10 @@
 import React from 'react';
+import WeatherIcon from '../WeatherIcon/WeatherIcon';
+import Cloud from '../../assets/vectors/cloud.svg';
 import './ForecastCard.css';
 
-const ForecastCard = ({ day, date, temperature }) => {
+const ForecastCard = ({ day, date, temperature_hi, temperature_lo, description }) => {
+  const icon = WeatherIcon(description);
   return (
     <div className="forecast-card">
       <div className="date-info">
@@ -9,8 +12,9 @@ const ForecastCard = ({ day, date, temperature }) => {
         <div className="date">{date}</div>
       </div>
       {/* Replace the next line with your actual WeatherIcon component */}
-      <img className="weather-icon" src="/vectors/cloud.svg" />
-      <div className="temperature">{temperature}°C</div>
+      <img className="weather-icon" src={icon} />
+      <div className="temperature">{temperature_hi}°C</div>
+      <div className="temperature">{temperature_lo}°C</div>
     </div>
   );
 };

@@ -1,7 +1,11 @@
+// Header.js
 import React, { useState } from 'react';
 import './Header.css';
 import Location from '../Location/Location';
 import { fetchWeatherByCity } from '../API/FetchWeather';
+import MenuSvg from '../../assets/vectors/menu.svg';
+import ProfileSvg from '../../assets/vectors/profile.svg';
+import LocationSvg from '../../assets/vectors/location.svg';
 
 const Header = ({ setWeatherData }) => {
   const [city, setCity] = useState('London,UK');
@@ -13,29 +17,31 @@ const Header = ({ setWeatherData }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     fetchWeatherByCity(city, setWeatherData);
-    setCity('');
+    setCity('')
+  };
+
+  const handleLocationSuccess = (cityName) => {
+    setCity(cityName);
   };
 
   return (
       <div className="header">
-          <img src="/vectors/menu.svg" alt="Menu" className="menu-icon"/>
-
+          <img src={MenuSvg} alt="Menu" className="menu-icon"/>
           <div className="location-form-container">
               <form onSubmit={handleSubmit} className="location-form">
-                  <img src="/vectors/location.svg" className="location-icon"/>
                   <input
                       type="text"
                       className="location-input"
                       value={city}
+                        placeholder="Search for a city..."
                       onChange={handleInputChange}
                   />
               </form>
               <div className="use-my-location-container">
-                  <Location />
+                  <Location setWeatherData={setWeatherData} onLocationSuccess={handleLocationSuccess}/> {/* Pass setCity as prop */}
               </div>
           </div>
-
-          <img src="/vectors/profile.svg" alt="Settings" className="settings-icon"/>
+          <img src={ProfileSvg} alt="Settings" className="settings-icon"/>
       </div>
   );
 };

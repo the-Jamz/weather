@@ -1,7 +1,23 @@
 .forecast-group {
-    display: flex;
-    justify-content: space-around;
-    padding: 0px 20px 20px 20px;
-    overflow-x: auto; /* In case you want to scroll on smaller screens */
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 20px 20px 20px;
+  overflow-x: auto; /* Allows scrolling on smaller screens */
 }
-  
+
+.forecast-group-child-card {
+  padding: 10px;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .forecast-group {
+    justify-content: flex-start;
+  }
+
+  .forecast-group::before,
+  .forecast-group::after {
+    content: '';
+    flex: 0 0 10px;
+  }
+}
