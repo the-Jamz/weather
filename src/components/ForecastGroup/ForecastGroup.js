@@ -26,6 +26,7 @@ const ForecastGroup = ({ data }) => {
           date={item.date}
           temperature_hi={item.temperature_hi}
           temperature_lo={item.temperature_lo}
+          description={item.description}
         />
         </div>
       ))}
