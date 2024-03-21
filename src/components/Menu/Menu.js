@@ -4,6 +4,7 @@ import axios from 'axios';
 import SunSvg from '../../assets/vectors/sun.svg';
 import HumiditySvg from '../../assets/vectors/humidity.svg';
 import WindSvg from '../../assets/vectors/wind.svg';
+import GearSelector from "../GearSelector/GearSelector";
 
 const Menu = ({ isOpen, onLocationSelect }) => {
   const [savedLocations, setSavedLocations] = useState(
@@ -102,8 +103,11 @@ const Menu = ({ isOpen, onLocationSelect }) => {
           </li>
         ))}
         </ul>
+        <GearSelector />
       </div>
+
     </div>
+
   );
 };
 

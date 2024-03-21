@@ -1,0 +1,19 @@
+.gear-selector {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #fafafa;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #090909;
+}
+
+.gear-selector h2 {
+  margin-bottom: 15px;
+}
+
+.gear-selector p {
+  font-size: 16px;
+  color: #333;
+}
