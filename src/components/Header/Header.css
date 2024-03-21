@@ -20,6 +20,7 @@
 .location-form {
   display: flex;
   align-items: center;
+  width: 100%; /* Ensure the form takes the full width of its container */
 }
 
 .location-input {
@@ -41,51 +42,49 @@
 
 .use-my-location-container {
   margin-right: 1rem;
-
-}
-
-
-@media (max-width: 500px) {
-  .header {
-    margin-top: -3rem;
-    flex-wrap: wrap;
-  }
-
-  .location-form-container {
-    flex: 1;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 3rem;
-    margin-right: 1rem;
-    margin-left: 1rem;
-
-  }
-
-  .location-form {
-    width: 100%;
-    justify-content: center;
     margin-top: 1rem;
-    margin-right: 2rem;
-  }
 
-  .use-my-location-container {
-    order: 2;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    margin-left: -1rem;
-  }
 
-  .location-input {
-    width: calc(100% - 40px);
-    margin-right: 0;
 
-  }
-
-  .menu-icon,
-  .settings-icon {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
 }
+
+
+
+
+.use-my-location-container {
+  /* The button is now inside the form, so it's part of the flex layout */
+    display: flex;
+    align-items: center;
+
+}
+
+@media (max-width: 600px) {
+    .location-form-container {
+        flex-direction: column;
+        align-items: center;
+        margin-left: -11rem;
+    }
+
+    .location-form {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .location-input,
+    .use-my-location-button {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+
+
+        max-width: 30px;
+        width: 100%;
+    }
+
+    .use-my-location-button {
+        padding: 0.5rem;
+    }
+
+
+}
+
 

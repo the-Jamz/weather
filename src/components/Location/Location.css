@@ -29,11 +29,13 @@
     flex-direction: column; /* Stack children vertically on small screens */
     align-items: center; /* Center align the flex items */
 
+
   }
 
   .location-form {
     width: 100%; /* Full width */
     margin-bottom: 0.5rem; /* Adjusted space between form and button */
+
   }
 
   .location-input,
@@ -44,6 +46,8 @@
 
   .use-my-location-button {
     padding: 0.5rem; /* Adjust padding to reduce button size */
+
+
   }
 }
 

@@ -25,27 +25,24 @@ const Header = ({ setWeatherData }) => {
 
   return (
       <div className="header">
-
-          <img src="/vectors/menu.svg" alt="Menu" className="menu-icon"/>
-          <div className="location-form-container">
-              <div className="use-my-location-container">
-                  <Location setWeatherData={setWeatherData}
-                            onLocationSuccess={handleLocationSuccess}/> {/* Pass setCity as prop */}
-              </div>
-              <form onSubmit={handleSubmit} className="location-form">
-
-                  <input
-                      type="text"
-                      className="location-input"
-                      value={city}
-                      placeholder="Search for a city..."
-                      onChange={handleInputChange}
-                  />
-              </form>
-
+        <img src="/vectors/menu.svg" alt="Menu" className="menu-icon" />
+        <div className="search-and-location">
+          <form onSubmit={handleSubmit} className="location-form">
+            <input
+              type="text"
+              className="location-input"
+              value={city}
+              placeholder="Search for a city..."
+              onChange={handleInputChange}
+            />
+          </form>
+          <div className="use-my-location-container">
+            <Location setWeatherData={setWeatherData} onLocationSuccess={handleLocationSuccess} />
           </div>
-          <img src="/vectors/profile.svg" alt="Settings" className="settings-icon"/>
+        </div>
+        <img src="/vectors/profile.svg" alt="Settings" className="settings-icon" />
       </div>
+
   );
 };
 
