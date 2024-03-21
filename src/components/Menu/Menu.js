@@ -6,14 +6,12 @@ import HumiditySvg from '../../assets/vectors/humidity.svg';
 import WindSvg from '../../assets/vectors/wind.svg';
 
 const Menu = ({ isOpen, onLocationSelect }) => {
-  // Retrieve saved locations from localStorage, or default to an empty array
   const [savedLocations, setSavedLocations] = useState(
     JSON.parse(localStorage.getItem('savedLocations')) || []
   );
   const [newLocation, setNewLocation] = useState('');
   const [locationWeather, setLocationWeather] = useState({});
 
-  // Update localStorage whenever savedLocations change
   useEffect(() => {
     localStorage.setItem('savedLocations', JSON.stringify(savedLocations));
   }, [savedLocations]);
