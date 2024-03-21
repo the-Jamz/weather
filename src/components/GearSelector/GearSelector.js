@@ -47,10 +47,13 @@ const GearSelector = () => {
   };
 
   return (
-    <div className="gear-selector">
-      <h2>Today's Cycling Gear Recommendation</h2>
-      <p>{gearSuggestion}</p>
-    </div>
+      <div className="gear-selector">
+          <div className="gear-selector-text-container">
+              <h2>Today's Cycling Gear Recommendation</h2>
+              <p>{gearSuggestion}</p>
+          </div>
+      </div>
+
   );
 };
 
