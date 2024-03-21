@@ -1,6 +1,5 @@
 import React from 'react';
 import WeatherIcon from '../WeatherIcon/WeatherIcon';
-import Cloud from '../../assets/vectors/cloud.svg';
 import './ForecastCard.css';
 
 const ForecastCard = ({ day, date, temperature_hi, temperature_lo, description }) => {

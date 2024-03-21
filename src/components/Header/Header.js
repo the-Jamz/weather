@@ -8,7 +8,7 @@ import ProfileSvg from '../../assets/vectors/profile.svg';
 import Menu from '../Menu/Menu';
 import LocationSvg from '../../assets/vectors/location.svg';
 
-const Header = ({ setWeatherData }) => {
+const Header = ({ weatherData, setWeatherData }) => {
   const [city, setCity] = useState('London,UK');
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -39,7 +39,7 @@ const Header = ({ setWeatherData }) => {
   return (
       <div className="header">
           <img src={MenuSvg} alt="Menu" className="menu-icon" onClick={toggleMenu}/>
-          <Menu isOpen={menuOpen} onLocationSelect={handleLocationSelect}/>
+          <Menu weatherData={weatherData} isOpen={menuOpen} onLocationSelect={handleLocationSelect}/>
           <div className="location-form-container">
               <form onSubmit={handleSubmit} className="location-form">
                   <input

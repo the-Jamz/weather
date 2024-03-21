@@ -39,15 +39,12 @@ const ComfortIndex = ({ size, strokeWidth, weatherData}) => {
     const gifSize = size * 0.00225;
 
     return (
-
         <div className="comfort-index" width={size} height={size}>
             <CircularProgress size={size} progress={progress} strokeWidth={strokeWidth}/>
             <div className="centered-content">
                 <img src={CyclingGif} style={{transform: `scale(${gifSize})`}}/>
             </div>
             <p className="comfort-text">COMFORT</p>
-
-
         </div>
     );
 };
