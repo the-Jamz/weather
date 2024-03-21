@@ -38,7 +38,7 @@ const Header = ({ setWeatherData }) => {
 
   return (
     <div className="header">
-      <img src="/vectors/menu.svg" alt="Menu" className="menu-icon" onClick={toggleMenu} />
+      <img src={MenuSvg} alt="Menu" className="menu-icon" onClick={toggleMenu} />
       <Menu isOpen={menuOpen} onLocationSelect={handleLocationSelect} />
 
       <div className="location-form-container">
