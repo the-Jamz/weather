@@ -29,7 +29,6 @@ const Header = ({ setWeatherData }) => {
           <img src={MenuSvg} alt="Menu" className="menu-icon"/>
           <div className="location-form-container">
               <form onSubmit={handleSubmit} className="location-form">
-                  <img src={LocationSvg} className="location-icon"/>
                   <input
                       type="text"
                       className="location-input"
