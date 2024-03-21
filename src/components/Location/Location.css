@@ -1,16 +1,5 @@
 .use-my-location-button {
-
-}
-
-.use-my-location-container {
-  margin-left: 1rem;
-}
-
-
-.use-my-location-button {
   padding: 0.5rem 1rem;
-  font-size: 1rem;
-  font-weight: 500;
   color: #ffffff;
   background-color: transparent;
   border: 2px solid #ffffff;
@@ -28,25 +17,25 @@
 
 
 /* header.css - Modify your existing media query like this */
-@media (max-width: 600px) { /* Adjust the max-width as needed for your design */
-  .location-form-container {
-    flex-direction: column; /* Stack children vertically on small screens */
-    align-items: center; /* Center align the flex items */
-  }
+/*@media (max-width: 600px) { !* Adjust the max-width as needed for your design *!*/
+/*  .location-form-container {*/
+/*    flex-direction: column; !* Stack children vertically on small screens *!*/
+/*    align-items: center; !* Center align the flex items *!*/
+/*  }*/
 
-  .location-form {
-    width: 100%; /* Full width */
-    margin-bottom: 0.5rem; /* Adjusted space between form and button */
-  }
+/*  .location-form {*/
+/*    width: 100%; !* Full width *!*/
+/*    margin-bottom: 0.5rem; !* Adjusted space between form and button *!*/
+/*  }*/
 
-  .location-input,
-  .use-my-location-button {
-    max-width: 300px; /* Maximum width for the input and button */
-    width: 100%; /* Full width */
-  }
+/*  .location-input,*/
+/*  .use-my-location-button {*/
+/*    max-width: 300px; !* Maximum width for the input and button *!*/
+/*    width: 100%; !* Full width *!*/
+/*  }*/
 
-  .use-my-location-button {
-    padding: 0.5rem; /* Adjust padding to reduce button size */
-  }
-}
+/*  .use-my-location-button {*/
+/*    padding: 0.5rem; !* Adjust padding to reduce button size *!*/
+/*  }*/
+/*}*/
 

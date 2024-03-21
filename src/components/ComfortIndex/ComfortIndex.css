@@ -10,6 +10,19 @@
 
 .centered-content {
   position: absolute;
+  width: 100%; /* Same width as .comfort-index to fit the GIF inside it */
+  height: 100%; /* Same height as .comfort-index to fit the GIF inside it */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-content img {
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: 2rem;
+  margin-right: 0.75rem;
+  object-fit: contain;
 }
 
 .comfort-text {
