@@ -28,19 +28,21 @@ const Header = ({ setWeatherData }) => {
 
           <img src="/vectors/menu.svg" alt="Menu" className="menu-icon"/>
           <div className="location-form-container">
+              <div className="use-my-location-container">
+                  <Location setWeatherData={setWeatherData}
+                            onLocationSuccess={handleLocationSuccess}/> {/* Pass setCity as prop */}
+              </div>
               <form onSubmit={handleSubmit} className="location-form">
-                  <img src="/vectors/location.svg" className="location-icon"/>
+
                   <input
                       type="text"
                       className="location-input"
                       value={city}
-                        placeholder="Search for a city..."
+                      placeholder="Search for a city..."
                       onChange={handleInputChange}
                   />
               </form>
-              <div className="use-my-location-container">
-                  <Location setWeatherData={setWeatherData} onLocationSuccess={handleLocationSuccess}/> {/* Pass setCity as prop */}
-              </div>
+
           </div>
           <img src="/vectors/profile.svg" alt="Settings" className="settings-icon"/>
       </div>

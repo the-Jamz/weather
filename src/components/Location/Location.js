@@ -11,6 +11,7 @@ const Location = ({ setWeatherData, onLocationSuccess }) => { // Receive setCity
                 fetchWeatherByCoords(latitude, longitude, setWeatherData, onLocationSuccess); // Pass setCity as argument
             }, (error) => {
                 console.error('Error obtaining location:', error);
+
             });
         } else {
             alert('Geolocation is not supported by this browser.');
@@ -20,9 +21,10 @@ const Location = ({ setWeatherData, onLocationSuccess }) => { // Receive setCity
     return (
         <div className="button-container">
             <button className="use-my-location-button" onClick={getGeolocation}>
-                Use My Location
+                <img src="/vectors/location.svg" className="" alt="Use My Location"/>
             </button>
         </div>
+
     );
 };
 
