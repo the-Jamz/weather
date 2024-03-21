@@ -51,7 +51,6 @@ const Menu = ({ isOpen, onLocationSelect }) => {
   };
 
   const handleDeleteLocation = (location, event) => {
-    // Prevent the click event from propagating to the parent element
     event.preventDefault();
     event.stopPropagation();
 
@@ -61,6 +60,12 @@ const Menu = ({ isOpen, onLocationSelect }) => {
 
   const handleLocationClick = (location) => {
     onLocationSelect(location);
+  };
+
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      handleAddLocation();
+    }
   };
 
   return (
@@ -73,6 +78,7 @@ const Menu = ({ isOpen, onLocationSelect }) => {
             type="text"
             value={newLocation}
             onChange={handleInputChange}
+            onKeyPress={handleKeyPress}
             placeholder="Enter new location"
             className="add-location-input"
           />
