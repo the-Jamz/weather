@@ -4,6 +4,8 @@ import RainSvg from '../../assets/vectors/weather-lines/icons/rain.svg';
 import CyclistSvg from '../../assets/vectors/cyclist.svg';
 import './ComfortIndex.css';
 
+import CyclingGif from '../../assets/GIF/cycling.gif';
+
 
 const ComfortIndex = ({ size, strokeWidth, weatherData}) => {
     function calculateComfortLevel(weatherData) {
@@ -34,14 +36,18 @@ const ComfortIndex = ({ size, strokeWidth, weatherData}) => {
     
     const progress = calculateComfortLevel(weatherData);
     const scale = size / 75;
+    const gifSize = size * 0.00225;
 
     return (
+
         <div className="comfort-index" width={size} height={size}>
-            <CircularProgress size={size} progress={progress} strokeWidth={strokeWidth} />
-                <div className="centered-content">
-                    <img src={CyclistSvg} style={{ transform: `scale(${scale})` }} />
-                </div>
+            <CircularProgress size={size} progress={progress} strokeWidth={strokeWidth}/>
+            <div className="centered-content">
+                <img src={CyclingGif} style={{transform: `scale(${gifSize})`}}/>
+            </div>
             <p className="comfort-text">COMFORT</p>
+
+
         </div>
     );
 };
