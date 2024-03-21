@@ -1,5 +1,5 @@
 import React from 'react';
-import Cloud from '../../assets/vectors/cloud.svg';
+import WeatherIcon from '../WeatherIcon/WeatherIcon';
 import Cyclist from '../../assets/vectors/cyclist.svg';
 import './WeatherCard.css';
 
@@ -22,9 +22,10 @@ const getCurrentDay = () => {
 
 const WeatherCard = ({city, description, temp, feels_like}) => {
   const currentDay = getCurrentDay();
+  const icon = WeatherIcon(description);
   return (
     <div className="weather-card">
-      <div className="weather-visual"><img className="weather-card-icon" src={Cloud} /></div>
+      <div className="weather-visual"><img src={icon} className="weather-card-icon" /></div>
       <div className="weathercard-temperature-section">
         <div className="weathercard-temperature">{temp}°C</div>
         <div className="feels-like">Feels like {feels_like}°C</div>
