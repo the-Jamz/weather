@@ -6,7 +6,7 @@ import HumiditySvg from '../../assets/vectors/humidity.svg';
 import WindSvg from '../../assets/vectors/wind.svg';
 import GearSelector from "../GearSelector/GearSelector";
 
-const Menu = ({ isOpen, onLocationSelect }) => {
+const Menu = ({ weatherData, isOpen, onLocationSelect }) => {
   const [savedLocations, setSavedLocations] = useState(
     JSON.parse(localStorage.getItem('savedLocations')) || []
   );
@@ -109,7 +109,7 @@ const Menu = ({ isOpen, onLocationSelect }) => {
           </li>
         ))}
         </ul>
-        <GearSelector />
+        <GearSelector weatherData={weatherData} />
       </div>
 
     </div>

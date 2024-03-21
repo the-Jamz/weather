@@ -20,7 +20,7 @@ const DetailsCard = ({ humidity, wind, uvIndex, precipitation }) => {
         <img src={Wind} />
         <div className="weather-text">
             <span className="weather-metric-type">Wind</span>
-            <span className="weather-metric-value">{wind} KMPH</span>
+            <span className="weather-metric-value">{wind} m/s</span>
         </div>
       </div>
       <div className="weather-metric uv-index">

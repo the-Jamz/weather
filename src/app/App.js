@@ -36,7 +36,7 @@ const App = () => {
           backgroundImage: `url(${RainGif})`,
 
       } : {}}>
-          <Header setWeatherData={setWeatherData} setQuery={setQuery}/>
+          <Header weatherData={weatherData} setWeatherData={setWeatherData} setQuery={setQuery}/>
           <div className="weather-alert">
               {weatherData ? (
                   <Alert message={weatherData.weather[0].main}/>

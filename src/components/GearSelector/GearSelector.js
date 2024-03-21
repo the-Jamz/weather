@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { fetchWeatherByCoords } from '../API/FetchWeather';
 import './GearSelector.css';
-const GearSelector = () => {
+
+const GearSelector = ({ weatherData }) => {
   const [location, setLocation] = useState({ latitude: null, longitude: null });
-  const [weather, setWeather] = useState(null);
+  //const [weather, setWeather] = useState(null);
   const [gearSuggestion, setGearSuggestion] = useState('Loading...');
 
   useEffect(() => {
@@ -15,17 +16,17 @@ const GearSelector = () => {
     });
   }, []);
 
-  useEffect(() => {
+  /*useEffect(() => {
     if (location.latitude && location.longitude) {
       fetchWeatherByCoords(location.latitude, location.longitude, setWeather, (name) => console.log(`Location: ${name}`));
     }
-  }, [location]);
+  }, [location]);*/
 
   useEffect(() => {
-    if (weather) {
-      determineGear(weather);
+    if (weatherData) {
+      determineGear(weatherData);
     }
-  }, [weather]);
+  }, [weatherData]);
 
   const determineGear = (weatherData) => {
     let suggestion = 'Standard Gear';
