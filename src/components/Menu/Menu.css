@@ -1,0 +1,153 @@
+/* Main Menu */
+
+.menu {
+    position: absolute;
+    width: 350px;
+    top: 0;
+    left: -100%;
+    transition: left 0.3s ease;
+    z-index: 11;
+  }
+  
+  .menu.open {
+    left: 0;
+  }
+  
+  .menu-background {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 350px;
+    height: 100%;
+    background-color: #41659c;
+    transition: left 0.3s ease;
+    z-index: 10;
+  }
+  
+  .menu.open .menu-background {
+    left: 0;
+  }
+  
+  .menu-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 30px;
+    padding-top: 50px;
+    z-index: 11;
+  }
+  
+  .menu-content ul {
+    padding: 0;
+  }
+  
+  .menu h2 {
+    margin-left: 0;
+  }
+  
+  /* Add Location */
+  
+  .add-location-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .add-location-input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .add-location-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8fb1e4;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-location-button:hover {
+    background-color: #afcaf3;
+  }
+  
+  .location-name {
+    font-size: 18px;
+    text-transform: capitalize;
+  }
+  
+  /* Saved Location */
+  
+  .saved-location {
+    list-style: none;
+    margin-bottom: 20px;
+    left: 0px;
+  }
+  
+  .location-content {
+    display: block;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .location-content:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .location-name {
+    position: absolute;
+    top: 10px;
+  }
+  
+  .delete-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    background-color: #7f9bc5;
+    color: white;
+    border: none;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .delete-button:hover {
+    background-color: #aabedb;
+  }
+  
+  
+  .weather-info {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .weather-info-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .weather-info-item img {
+    width: 30px;
+    height: 20px;
+  }
+  
+  .weather-info-item span {
+    color: white;
+  }
