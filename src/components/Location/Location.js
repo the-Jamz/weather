@@ -21,7 +21,6 @@ const Location = ({ setWeatherData, onLocationSuccess }) => { // Receive setCity
         <div className="button-container">
             <button className="use-my-location-button" onClick={getGeolocation}>
                 <img src={LocationSvg} className="" alt="Use My Location"/>
-
             </button>
         </div>
     );
