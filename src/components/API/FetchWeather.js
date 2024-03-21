@@ -73,7 +73,9 @@ const fetchWeatherByCoords = async (latitude, longitude, setWeather, onLocationS
   } catch (error) {
     console.error('Error fetching weather by coordinates:', error);
   }
+
 };
+
 
 const fetchWeatherByCity = async (city, setWeather) => {
   try {
