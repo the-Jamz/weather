@@ -2,7 +2,7 @@
 import React from 'react';
 import { fetchWeatherByCoords } from '../API/FetchWeather';
 import './Location.css';
-
+import LocationSvg from '../../assets/vectors/location.svg';
 const Location = ({ setWeatherData, onLocationSuccess }) => { // Receive setCity as prop
     const getGeolocation = () => {
         if (navigator.geolocation) {
@@ -20,7 +20,7 @@ const Location = ({ setWeatherData, onLocationSuccess }) => { // Receive setCity
     return (
         <div className="button-container">
             <button className="use-my-location-button" onClick={getGeolocation}>
-                Use My Location
+                <img src={LocationSvg} className="" alt="Use My Location"/>
             </button>
         </div>
     );
