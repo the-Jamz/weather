@@ -48,11 +48,11 @@
 @media (max-width: 500px) {
   .header {
     margin-top: -3rem;
-    flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+    flex-wrap: wrap;
   }
 
   .location-form-container {
-    flex: 1; /* Allow the container to fill the available space */
+    flex: 1;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 3rem;
@@ -65,7 +65,7 @@
     width: 100%;
     justify-content: center;
     margin-top: 1rem;
-    margin-right: 2rem; /* Reset margin between form and button */
+    margin-right: 2rem;
   }
 
   .use-my-location-container {
@@ -77,13 +77,13 @@
   }
 
   .location-input {
-    width: calc(100% - 40px); /* Subtract the size of the icon */
-    margin-right: 0; /* Reset margin between input and icon */
+    width: calc(100% - 40px);
+    margin-right: 0;
   }
 
   .menu-icon,
   .settings-icon {
-    width: 1.5rem; /* Adjust icon sizes for mobile */
+    width: 1.5rem;
     height: 1.5rem;
   }
 }
