@@ -3,11 +3,12 @@ import WeatherIcon from '../WeatherIcon/WeatherIcon';
 import Cyclist from '../../assets/vectors/cyclist.svg';
 import './WeatherCard.css';
 
-
+// Utility function to capitalize the first letter of each word in a string.
 const capitalizeWords = (words) => {
   return words.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 }
 
+// Function to get a string representing the current day in the format "DayOfWeek, Day Month".
 const getCurrentDay = () => {
   const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   const monthsOfYear = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -20,9 +21,11 @@ const getCurrentDay = () => {
   return `${dayOfWeek}, ${dayOfMonth} ${month}`;
 }
 
+// WeatherCard component displays weather information including city, temperature, and description.
 const WeatherCard = ({city, description, temp, feels_like}) => {
-  const currentDay = getCurrentDay();
-  const icon = WeatherIcon(description);
+  const currentDay = getCurrentDay(); // Current day string.
+  const icon = WeatherIcon(description); // Icon based on the weather description.
+
   return (
     <div className="weather-card">
       <div className="weather-visual"><img src={icon} className="weather-card-icon" /></div>

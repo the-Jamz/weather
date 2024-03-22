@@ -1,8 +1,9 @@
+
 .forecast-group {
   display: flex;
   justify-content: space-around;
   padding: 0px 20px 20px 20px;
-  overflow-x: auto; /* Allows scrolling on smaller screens */
+  overflow-x: auto;
 }
 
 .forecast-group-child-card {

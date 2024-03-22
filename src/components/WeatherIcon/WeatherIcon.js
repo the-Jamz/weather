@@ -8,7 +8,8 @@ import RainSvg from '../../assets/vectors/rain.svg';
 import SnowSvg from '../../assets/vectors/snow.svg';
 import FogSvg from '../../assets/vectors/fog.svg';
 
-const WeatherIcon = ( icon ) => {
+// WeatherIcon function selects an appropriate SVG icon based on the weather description.
+const WeatherIcon = (icon) => {
     switch (icon) {
         case 'scattered clouds':
             return CloudSvg;
@@ -23,13 +24,13 @@ const WeatherIcon = ( icon ) => {
         case 'rain':
             return RainSvg;
         case 'thunderstorm':
-            return BrokenCloudsSvg;
+            return BrokenCloudsSvg; // Uses broken clouds icon for thunderstorms.
         case 'snow':
             return SnowSvg;
         case 'mist':
             return FogSvg;
         default:
-            return CloudSvg;
+            return CloudSvg; // Default icon for unspecified weather conditions.
     }
 };
 
