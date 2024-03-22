@@ -2,14 +2,8 @@ import React from 'react';
 import AlertSvg from '../../assets/vectors/alert.svg';
 import './Alert.css';
 
-const Alert = ({ message }) => {
-  const [isVisible, setIsVisible] = React.useState(true);
-  if (!message) {
-    return null;
-  }
-
-  // Function to determine the class based on the weather condition
-  const getAlertClass = (message) => {
+// Function to determine the class based on the weather condition
+const getAlertClass = (message) => {
   switch (message.toLowerCase()) {
     case 'rain':
     case 'drizzle':
@@ -26,9 +20,16 @@ const Alert = ({ message }) => {
   }
 };
 
+const Alert = ({ message }) => {
+    if (!message) {
+      // Do not render the component if the message is empty
+      return null;
+    }
+
+  // Return the alert component with the appropriate warning message and class
   return (
     <div className={getAlertClass(message)}>
-      {message !== 'Clear' && <img src={AlertSvg} className="alert-icon" />}
+      {message !== 'Clear' && <img src={AlertSvg} className="alert-icon" alt={message} />}
       <span className="alert-text">{message}</span>
     </div>
   );

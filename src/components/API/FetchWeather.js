@@ -4,6 +4,7 @@ const api = {
   base: "https://api.openweathermap.org/data/2.5/"
 };
 
+// Process the weather forecast into a daily forecast of highs and lows from the 3 hour intervals provided
 const processWeatherData = (weatherData) => {
   const groupedByDay = {};
 
@@ -49,6 +50,7 @@ const processWeatherData = (weatherData) => {
   return dailyForecasts;
 };
 
+// Fetch the weather forecast by coordinates
 const fetchForecastByCoords = async (latitude, longitude) => {
   try {
     const response = await axios.get(
@@ -62,6 +64,7 @@ const fetchForecastByCoords = async (latitude, longitude) => {
   }
 };
 
+// Fetch the current weather by coordinates
 const fetchWeatherByCoords = async (latitude, longitude, setWeather, onLocationSuccess) => {
   try {
     const response = await axios.get(
@@ -76,7 +79,7 @@ const fetchWeatherByCoords = async (latitude, longitude, setWeather, onLocationS
 
 };
 
-
+// Fetch the current weather by city
 const fetchWeatherByCity = async (city, setWeather) => {
   try {
     const response = await axios.get(
