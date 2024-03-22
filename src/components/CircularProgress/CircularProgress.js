@@ -1,6 +1,7 @@
 import React from 'react';
 import './CircularProgress.css';
 
+// Circular progress component to display the comfort index
 const CircularProgress = ({ size, progress, strokeWidth }) => {
     const radius = (size - strokeWidth) / 2;
     const circumference = radius * 2 * Math.PI;
@@ -11,6 +12,7 @@ const CircularProgress = ({ size, progress, strokeWidth }) => {
 
     return (
         <svg width={size} height={size}>
+            { /* Circle to display the background of the progress bar */ }
             <circle
                 stroke="#D9D9D9"
                 fill="transparent"
@@ -21,6 +23,7 @@ const CircularProgress = ({ size, progress, strokeWidth }) => {
                 cx={size / 2}
                 cy={size / 2}
             />
+            { /* Circle to display the progress bar */ }
             <circle
                 stroke={strokeColor}
                 fill="transparent"
