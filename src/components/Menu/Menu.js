@@ -13,6 +13,7 @@ const Menu = ({ weatherData, isOpen, onLocationSelect }) => {
   const [newLocation, setNewLocation] = useState('');
   const [locationWeather, setLocationWeather] = useState({});
 
+  // Effect to fetch weather data for saved locations.
   useEffect(() => {
     localStorage.setItem('savedLocations', JSON.stringify(savedLocations));
   }, [savedLocations]);
@@ -40,6 +41,7 @@ const Menu = ({ weatherData, isOpen, onLocationSelect }) => {
     fetchWeatherForSavedLocations();
   }, [savedLocations]);
 
+  // Handlers for adding, deleting locations, and updating new location input.
   const handleInputChange = (event) => {
     setNewLocation(event.target.value);
   };
@@ -68,6 +70,7 @@ const Menu = ({ weatherData, isOpen, onLocationSelect }) => {
       handleAddLocation();
     }
   };
+  // Renders the menu UI with saved locations and their weather data.
 
   return (
     <div className={`menu ${isOpen ? 'open' : ''}`}>
